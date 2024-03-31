@@ -146,7 +146,6 @@ function loaddiscord() {
 	echo "Loading discord...\n";
 	exec("%USERPROFILE%\appdata\local\Discord\Update.exe --processStart Discord.exe");
 	sleep(3);
-	//echo $result;
 	}else{
 	echo "\033[31m";
 	echo "Discord is already running...";
@@ -155,8 +154,6 @@ function loaddiscord() {
 	echo mainmenu();
 	}
 }
-
 echo mainmenu();
-
 
 ?>
