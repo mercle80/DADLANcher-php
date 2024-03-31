@@ -12,3 +12,7 @@ To run, open a command prompt and change the directory to where DADLANcher-php h
 Type "php dadlancher.php"
 
 A shortcut can also be made with the above command.  An icon is also provided (From the original DADLANcher)
+
+### Diasplay settings
+The display settings are already configured unlike the original DADLANcher.  There is no need to set these parameters.
+
