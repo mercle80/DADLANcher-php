@@ -15,15 +15,15 @@ function wireguardtest() {
 	$host="10.0.0.102";
 	exec("ping -n 1 " . $host, $output, $result);
 	if ($result == 0) {
-		echo "Wireguard is up\n";
-		sleep(3);
+	echo "Wireguard is up\n";
+	sleep(3);
 	}else{
-		echo "\033[31m";
-		echo "Wireguard is down\n";
-		echo "\033[32m";
-		sleep(3);
-		}
+	echo "\033[31m";
+	echo "Wireguard is down\n";
+	echo "\033[32m";
+	sleep(3);
 	}
+}
 
 echo wireguardtest();
 echo "\n\n";
@@ -52,15 +52,16 @@ if ( $mmchoice == 1) {
     }
 elseif ( $mmchoice == 2) {
     echo "Games List";
-		echo gamesmenu();
+	echo gamesmenu();
     }
 elseif ( $mmchoice == 3) {
-    echo "Loading disord...\n";
-		echo mainmenu();
+	echo loaddiscord();
+	echo mainmenu();
     }
 elseif ( $mmchoice == 4) {
     echo "Exiting...";
 	echo "\033[39m\n";
+	exit;
     }
 }
 
@@ -140,7 +141,19 @@ elseif ( $gmchoice == 9) {
 
 //Load discord
 function loaddiscord() {
-	
+	$discordcheck = exec("tasklist | findstr \"Discord.exe\"", $output, $result);
+	if ($result == 1){
+	echo "Loading discord...\n";
+	exec("%USERPROFILE%\appdata\local\Discord\Update.exe --processStart Discord.exe");
+	sleep(3);
+	//echo $result;
+	}else{
+	echo "\033[31m";
+	echo "Discord is already running...";
+	echo "\033[32m";
+	sleep(5);
+	echo mainmenu();
+	}
 }
 
 echo mainmenu();
