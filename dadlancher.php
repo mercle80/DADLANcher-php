@@ -91,12 +91,13 @@ $gmchoice = fgets($input);
 
 if ( $gmchoice == 1) {
     echo "Battlefield 1942 loading...\n";
-	exec($bf1942);
+	system("cd C:\Program Files (x86)\EA GAMES\Battlefield 1942\ &".$bf1942);
 	echo gamesmenu();
     }
 elseif ( $gmchoice == 2) {
     echo "Battlefield 2 loading...\n";
-	exec($bf2);
+	system("cd C:\Program Files (x86)\EA GAMES\Battlefield 2\ &".$bf2);
+	sleep(5);
 	echo gamesmenu();
     }
 elseif ( $gmchoice == 3) {
@@ -146,6 +147,7 @@ function loaddiscord() {
 	echo "Loading discord...\n";
 	exec("%USERPROFILE%\appdata\local\Discord\Update.exe --processStart Discord.exe");
 	sleep(3);
+	//echo $result;
 	}else{
 	echo "\033[31m";
 	echo "Discord is already running...";
@@ -154,6 +156,8 @@ function loaddiscord() {
 	echo mainmenu();
 	}
 }
+
 echo mainmenu();
+
 
 ?>
