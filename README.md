@@ -1,6 +1,8 @@
 # DADLANcher-php
 A PHP version of DADLANcher
 
+*** DO NOT USE THIS VERSION OF PHP, USE 8.3.36 OR NEWER ***
+
 https://github.com/dadlan-au/DADLANcher
 
 The gamelocations.php.inc file may need to be modified to suit the users game install locations.
