@@ -1,7 +1,7 @@
 # DADLANcher-php
 A PHP version of DADLANcher
 
-*** DO NOT USE THIS VERSION OF PHP, USE 8.3.36 OR NEWER ***
+*** DO NOT USE THIS VERSION OF PHP, USE 8.3.36 OR NEWER (post 22-10-26) ***
 
 https://github.com/dadlan-au/DADLANcher
 
